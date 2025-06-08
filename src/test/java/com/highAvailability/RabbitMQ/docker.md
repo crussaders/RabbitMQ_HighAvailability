@@ -33,3 +33,10 @@ networks:
 networks:
 rabbitnet:
 driver: bridge
+
+
+docker commands
+
+docker exec -it rabbit2 rabbitmqctl stop_app
+docker exec -it rabbit2 rabbitmqctl join_cluster rabbit@rabbit1
+docker exec -it rabbit2 rabbitmqctl start_app
